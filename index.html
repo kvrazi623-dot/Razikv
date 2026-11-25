@@ -1,0 +1,1414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Razi KV | Web Designer, State Champion & Drop Launch Founder</title>
+<meta name="description" content="Razi KV: website designer, state champion footballer, science fair winner and creator of Drop Launch.">
+<meta name="theme-color" content="#080808">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#080808;
+  --bg2:#0f0f0f;
+  --card:#121212;
+  --text:#f2f0ea;
+  --muted:#8d8b85;
+  --line:rgba(255,255,255,.10);
+  --accent:#d4ff4f;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+.wrap {
+  width:min(1180px,90%);
+  margin:auto;
+}
+
+section {
+  padding:110px 0;
+  border-top:1px solid var(--line);
+}
+
+.eyebrow {
+  font-size:.75rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:22px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.eyebrow b {
+  color:var(--accent);
+  font-weight:600;
+}
+
+h2 {
+  font-size:clamp(2.1rem,5vw,3.8rem);
+  font-weight:600;
+  line-height:1.08;
+  letter-spacing:-.02em;
+  margin-bottom:22px;
+}
+
+em,.serif {
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:500;
+  color:var(--accent);
+  letter-spacing:0;
+}
+
+.sub {
+  color:var(--muted);
+  max-width:560px;
+  margin-bottom:56px;
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 30px;
+  border-radius:50px;
+  font-weight:500;
+  font-size:.92rem;
+  border:1px solid var(--line);
+  cursor:pointer;
+  transition:.3s;
+  font-family:inherit;
+  background:transparent;
+  color:var(--text);
+}
+
+.btn:hover {
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+.btn.solid {
+  background:var(--accent);
+  color:#080808;
+  border-color:var(--accent);
+  font-weight:600;
+}
+
+.btn.solid:hover {
+  background:transparent;
+  color:var(--accent);
+}
+
+/* NAV */
+
+header {
+  position:fixed;
+  inset:0 0 auto 0;
+  z-index:60;
+  background:rgba(8,8,8,.8);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+
+nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:74px;
+}
+
+.logo {
+  font-weight:600;
+  letter-spacing:.02em;
+}
+
+.logo span { color:var(--accent); }
+
+.links {
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+.links a {
+  font-size:.85rem;
+  color:var(--muted);
+  transition:.25s;
+}
+
+.links a:hover { color:var(--text); }
+
+.nav-cta {
+  font-size:.85rem;
+  padding:10px 22px;
+}
+
+.menu-btn {
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  border-radius:50px;
+  color:var(--text);
+  padding:8px 18px;
+  font-family:inherit;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:130px 0 70px;
+  border-top:none;
+  position:relative;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:50px;
+  align-items:center;
+}
+
+.pill {
+  display:inline-block;
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  border:1px solid var(--line);
+  padding:8px 18px;
+  border-radius:50px;
+  color:var(--muted);
+  margin-bottom:28px;
+}
+
+.pill i {
+  display:inline-block;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-right:10px;
+  animation:blink 1.6s infinite;
+}
+
+@keyframes blink {
+  50% { opacity:.25; }
+}
+
+.hero h1 {
+  font-size:clamp(3.2rem,10vw,8rem);
+  font-weight:800;
+  line-height:.95;
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+
+.hero h2.role {
+  font-size:clamp(1.5rem,3.4vw,2.6rem);
+  font-weight:300;
+  margin:26px 0 22px;
+  letter-spacing:-.01em;
+}
+
+.hero p.lead {
+  color:var(--muted);
+  max-width:520px;
+  margin-bottom:36px;
+}
+
+.btns {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.photo {
+  position:relative;
+  width:100%;
+  max-width:370px;
+  aspect-ratio:4/5;
+  border-radius:26px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:var(--card);
+  justify-self:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(.15) contrast(1.05);
+}
+
+.photo .fallback {
+  font-size:6rem;
+  font-weight:800;
+  color:var(--accent);
+  display:none;
+}
+
+.photo::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:26px;
+  box-shadow:inset 0 -90px 80px -40px rgba(8,8,8,.7);
+  pointer-events:none;
+}
+
+.photo-tag {
+  position:absolute;
+  left:18px;
+  bottom:18px;
+  z-index:2;
+  font-size:.75rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  background:var(--accent);
+  color:#080808;
+  padding:7px 14px;
+  border-radius:50px;
+  font-weight:600;
+}
+
+/* MARQUEE */
+
+.marquee {
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+  padding:22px 0;
+  background:var(--bg2);
+}
+
+.track {
+  display:flex;
+  gap:50px;
+  width:max-content;
+  animation:slide 28s linear infinite;
+}
+
+.track span {
+  font-size:1.5rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  white-space:nowrap;
+  color:var(--muted);
+}
+
+.track span:nth-child(3n+1) { color:var(--text); }
+.track span.dot { color:var(--accent); }
+
+@keyframes slide {
+  to { transform:translateX(-50%); }
+}
+
+/* ABOUT */
+
+.about-grid {
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:70px;
+}
+
+.about-grid p {
+  color:var(--muted);
+  margin-bottom:18px;
+  font-size:1.02rem;
+}
+
+.about-grid p strong {
+  color:var(--text);
+  font-weight:500;
+}
+
+.stats {
+  display:grid;
+  gap:0;
+}
+
+.stat {
+  padding:26px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.stat:first-child { border-top:1px solid var(--line); }
+
+.stat b {
+  font-size:3rem;
+  font-weight:600;
+  letter-spacing:-.03em;
+  color:var(--accent);
+  display:block;
+  line-height:1.1;
+}
+
+.stat span {
+  color:var(--muted);
+  font-size:.88rem;
+}
+
+/* SERVICES */
+
+.rows { border-top:1px solid var(--line); }
+
+.row {
+  display:grid;
+  grid-template-columns:70px 1fr 1.3fr;
+  gap:20px;
+  padding:34px 0;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+  transition:.35s;
+}
+
+.row:hover {
+  padding-left:16px;
+  background:linear-gradient(90deg,rgba(212,255,79,.06),transparent);
+}
+
+.row .n {
+  color:var(--accent);
+  font-size:.85rem;
+  font-weight:500;
+  padding-top:6px;
+}
+
+.row h3 {
+  font-size:1.5rem;
+  font-weight:500;
+  letter-spacing:-.01em;
+}
+
+.row p { color:var(--muted); }
+
+/* ACHIEVEMENTS */
+
+.ach-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:22px;
+}
+
+.ach {
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:40px;
+  background:var(--card);
+  transition:.35s;
+  position:relative;
+  overflow:hidden;
+}
+
+.ach:hover {
+  border-color:var(--accent);
+  transform:translateY(-6px);
+}
+
+.ach small {
+  color:var(--accent);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-size:.72rem;
+  font-weight:600;
+}
+
+.ach h3 {
+  font-size:1.6rem;
+  font-weight:500;
+  margin:14px 0 12px;
+  letter-spacing:-.01em;
+}
+
+.ach p { color:var(--muted); }
+
+.ach .big {
+  position:absolute;
+  right:26px;
+  top:14px;
+  font-size:4.5rem;
+  opacity:.9;
+}
+
+/* SPORTS */
+
+.sports {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:0;
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+}
+
+.sport {
+  padding:38px 18px;
+  text-align:center;
+  border-right:1px solid var(--line);
+  transition:.35s;
+}
+
+.sport:last-child { border-right:none; }
+
+.sport:hover {
+  background:var(--accent);
+  color:#080808;
+}
+
+.sport:hover small { color:#080808; }
+
+.sport .e {
+  font-size:2.4rem;
+  display:block;
+  margin-bottom:12px;
+}
+
+.sport b {
+  font-weight:500;
+  display:block;
+}
+
+.sport small {
+  color:var(--muted);
+  font-size:.78rem;
+}
+
+/* COURSE */
+
+.course-box {
+  border:1px solid var(--line);
+  border-radius:32px;
+  padding:clamp(30px,5vw,64px);
+  background:radial-gradient(circle at 90% 0%,rgba(212,255,79,.12),transparent 45%),var(--card);
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:56px;
+  align-items:center;
+}
+
+.course-box h2 {
+  font-size:clamp(2.6rem,6vw,5rem);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:-.04em;
+  line-height:1;
+}
+
+.course-box ul {
+  list-style:none;
+  margin:26px 0 34px;
+}
+
+.course-box li {
+  padding:10px 0 10px 30px;
+  border-bottom:1px solid var(--line);
+  color:var(--muted);
+  position:relative;
+}
+
+.course-box li::before {
+  content:"→";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+}
+
+.mods {
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:10px 28px;
+  background:var(--bg);
+}
+
+.mod {
+  display:flex;
+  gap:18px;
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.mod:last-child { border:none; }
+
+.mod i {
+  font-style:normal;
+  color:var(--accent);
+  font-weight:600;
+  min-width:28px;
+}
+
+.mod span {
+  color:var(--muted);
+  font-size:.92rem;
+}
+
+/* CONTACT */
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
+}
+
+.insta {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:20px 26px;
+  margin-top:18px;
+  transition:.3s;
+}
+
+.insta:hover { border-color:var(--accent); }
+
+.insta small {
+  color:var(--muted);
+  display:block;
+}
+
+.insta .arrow {
+  font-size:1.4rem;
+  color:var(--accent);
+}
+
+form {
+  display:grid;
+  gap:18px;
+}
+
+.two {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+label {
+  font-size:.75rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  display:block;
+  margin-bottom:8px;
+}
+
+input,select,textarea {
+  width:100%;
+  padding:15px 0;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid var(--line);
+  color:var(--text);
+  font-family:inherit;
+  font-size:1rem;
+  outline:none;
+  transition:.25s;
+  border-radius:0;
+}
+
+select option { background:#121212; }
+
+input:focus,select:focus,textarea:focus {
+  border-color:var(--accent);
+}
+
+textarea {
+  resize:vertical;
+  min-height:110px;
+}
+
+.note {
+  font-size:.78rem;
+  color:var(--muted);
+}
+
+#status {
+  font-size:.9rem;
+  min-height:22px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top:1px solid var(--line);
+  padding:70px 0 40px;
+}
+
+.foot {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+  align-items:flex-end;
+}
+
+.foot .big {
+  font-size:clamp(1.6rem,4vw,3rem);
+  font-weight:600;
+  letter-spacing:-.02em;
+  line-height:1.15;
+}
+
+.foot small { color:var(--muted); }
+
+.top {
+  border:1px solid var(--line);
+  padding:10px 22px;
+  border-radius:50px;
+  font-size:.78rem;
+  letter-spacing:.14em;
+  color:var(--muted);
+  transition:.3s;
+}
+
+.top:hover {
+  color:var(--accent);
+  border-color:var(--accent);
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity .9s,transform .9s;
+}
+
+.reveal.show {
+  opacity:1;
+  transform:none;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:900px) {
+
+  .hero-grid,
+  .about-grid,
+  .course-box,
+  .contact-grid {
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .photo {
+    order:-1;
+    max-width:300px;
+  }
+
+  .row { grid-template-columns:44px 1fr; }
+
+  .row p { grid-column:2; }
+
+  .sports { grid-template-columns:repeat(2,1fr); }
+
+  .sport { border-bottom:1px solid var(--line); }
+
+  .links {
+    display:none;
+    position:absolute;
+    top:74px;
+    left:0;
+    right:0;
+    background:var(--bg);
+    flex-direction:column;
+    padding:24px 5%;
+    gap:20px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .links.open { display:flex; }
+
+  .menu-btn { display:block; }
+
+  .nav-cta { display:none; }
+
+  .two { grid-template-columns:1fr; }
+
+  section { padding:80px 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+<nav class="wrap">
+
+<a href="#home" class="logo">razi<span>.kv</span></a>
+
+<ul class="links" id="links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#sports">Sports</a></li>
+<li><a href="#course">Drop Launch</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="#contact" class="btn nav-cta">Let's talk</a>
+
+<button class="menu-btn" id="menuBtn">Menu</button>
+
+</nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="wrap hero-grid">
+
+<div>
+
+<span class="pill"><i></i>Available for website projects</span>
+
+<h1>Razi K V.</h1>
+
+<h2 class="role">
+Website Designer, <em>Athlete</em> &amp; Founder of Drop Launch
+</h2>
+
+<p class="lead">
+Creative. Disciplined. Results-driven. A state champion footballer and state science fair winner who now designs websites for businesses and teaches others to launch online stores.
+</p>
+
+<div class="btns">
+
+<a href="#contact" class="btn solid">
+Let's Work Together →
+</a>
+
+<a href="#course" class="btn">
+Explore Drop Launch
+</a>
+
+</div>
+</div>
+
+<div class="photo">
+
+<img src="razi.jpg" alt="Razi KV"
+onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+
+<span class="fallback">RK</span>
+
+</div>
+
+</div>
+</section>
+
+<!-- MARQUEE -->
+
+<div class="marquee">
+<div class="track" id="track">
+
+<span>Web Design</span>
+<span class="dot">✦</span>
+<span>Creativity</span>
+<span class="dot">✦</span>
+<span>Champion Mindset</span>
+<span class="dot">✦</span>
+<span>Drop Launch</span>
+<span class="dot">✦</span>
+<span>Meaningful Growth</span>
+<span class="dot">✦</span>
+
+</div>
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="wrap about-grid">
+
+<div class="reveal">
+
+<div class="eyebrow"><b>01</b> / About</div>
+
+<h2>Champion mindset.<br><em>Creative execution.</em></h2>
+
+<p>
+Few people excel in so many worlds at once.
+<strong>Razi is a state champion footballer</strong>
+whose speed, discipline and teamwork took him to the top, and he is just as sharp in the lab, where his
+<strong>working model won first place at the State Science Fair</strong>.
+</p>
+
+<p>
+That same drive powers his work as a
+<strong>website designer</strong>, building clean, modern, fast websites for businesses and institutions. As the founder of
+<strong>Drop Launch</strong>, he also guides beginners step by step into the world of drop shipping, all while continuing his studies.
+</p>
+
+<p>
+Whether on the pitch, on stage or on screen, Razi shows up, puts in the work and delivers.
+</p>
+
+<a href="#contact" class="btn" style="margin-top:14px">
+Start a conversation
+</a>
+
+</div>
+
+<div class="stats reveal">
+
+<div class="stat">
+<b>2</b>
+<span>State-level wins: football &amp; science fair</span>
+</div>
+
+<div class="stat">
+<b>5</b>
+<span>Sports played with passion</span>
+</div>
+
+<div class="stat">
+<b>1</b>
+<span>Own course: Drop Launch</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="wrap">
+
+<div class="eyebrow reveal"><b>02</b> / Web design</div>
+
+<h2 class="reveal">What I <em>build.</em></h2>
+
+<p class="sub reveal">
+Websites made for organisations and businesses, from the first sketch to going live.
+</p>
+
+<div class="rows">
+
+<div class="row reveal">
+<span class="n">01</span>
+<h3>Business Websites</h3>
+<p>Professional, trustworthy websites that present your brand clearly and bring in customers.</p>
+</div>
+
+<div class="row reveal">
+<span class="n">02</span>
+<h3>Online Stores</h3>
+<p>Easy-to-manage e-commerce websites designed to showcase products and make selling simple.</p>
+</div>
+
+<div class="row reveal">
+<span class="n">03</span>
+<h3>Landing Pages</h3>
+<p>Focused single pages built to turn visitors into enquiries and sales.</p>
+</div>
+
+<div class="row reveal">
+<span class="n">04</span>
+<h3>Institution &amp; Organisation Sites</h3>
+<p>Websites for shops, schools, clubs and companies that need a strong online presence.</p>
+</div>
+
+<div class="row reveal">
+<span class="n">05</span>
+<h3>Mobile-First Design</h3>
+<p>Every website looks and works perfectly on phones, tablets and desktops.</p>
+</div>
+
+<div class="row reveal">
+<span class="n">06</span>
+<h3>Updates &amp; Support</h3>
+<p>Fixes, changes and improvements after your website goes live.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+<div class="wrap">
+
+<div class="eyebrow reveal"><b>03</b> / Achievements</div>
+
+<h2 class="reveal">Proven at <em>state level.</em></h2>
+
+<p class="sub reveal">
+Two top honours that show what dedication and creativity can do.
+</p>
+
+<div class="ach-grid">
+
+<div class="ach reveal">
+<span class="big">⚽</span>
+<small>State Level</small>
+<h3>Football State Champion</h3>
+<p>Champion at state level in football, built on relentless training, teamwork and a never-give-up attitude.</p>
+</div>
+
+<div class="ach reveal">
+<span class="big">🔬</span>
+<small>1st Place · State Science Fair</small>
+<h3>Best Working Model</h3>
+<p>First place at the State Science Fair in the working model category, for an original, hands-on idea.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SPORTS -->
+
+<section id="sports">
+
+<div class="wrap">
+
+<div class="eyebrow reveal"><b>04</b> / Sports</div>
+
+<h2 class="reveal">An athlete <em>at heart.</em></h2>
+
+<p class="sub reveal">
+Sport taught me discipline, teamwork and how to stay calm under pressure, and I bring all of it to my work.
+</p>
+
+<div class="sports reveal">
+
+<div class="sport">
+<span class="e">⚽</span>
+<b>Football</b>
+<small>State Champion</small>
+</div>
+
+<div class="sport">
+<span class="e">🏃</span>
+<b>Running</b>
+<small>Speed &amp; stamina</small>
+</div>
+
+<div class="sport">
+<span class="e">🏏</span>
+<b>Cricket</b>
+<small>Bat &amp; ball</small>
+</div>
+
+<div class="sport">
+<span class="e">🏸</span>
+<b>Badminton</b>
+<small>Quick reflexes</small>
+</div>
+
+<div class="sport">
+<span class="e">🏐</span>
+<b>Volleyball</b>
+<small>Team power</small>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- DROP LAUNCH COURSE -->
+
+<section id="course">
+
+<div class="wrap">
+
+<div class="eyebrow reveal"><b>05</b> / My course</div>
+
+<div class="course-box reveal">
+
+<div>
+
+<h2>Drop<br><em>Launch.</em></h2>
+
+<p style="color:var(--muted);margin-top:20px">
+A simple, step-by-step beginner course that teaches how dropshipping works, how to research products, build a store, market products and understand your numbers.
+</p>
+
+<ul>
+<li>Complete beginner curriculum, 10+ lessons</li>
+<li>Product research and store-building guidance</li>
+<li>Marketing fundamentals</li>
+<li>Built-in profit calculator and learning resources</li>
+<li>Learn at your own pace, on phone or computer</li>
+</ul>
+
+<p style="font-size:2.2rem;font-weight:600;letter-spacing:-.02em;margin-bottom:22px">
+<span style="color:var(--accent)">₹299</span>
+<small style="font-size:.85rem;color:var(--muted);font-weight:400">
+one-time course access
+</small>
+</p>
+
+<div class="btns">
+
+<a
+href="https://wa.me/919846309147?text=Hello%20I%20am%20interested%20in%20your%20Dropshipping%20Course.%20Please%20send%20me%20the%20details."
+target="_blank"
+rel="noopener"
+class="btn solid">
+Buy Course on WhatsApp →
+</a>
+
+<a
+href="https://kvrazi623-dot.github.io/dropshipping-course/"
+target="_blank"
+rel="noopener"
+class="btn">
+Visit Course Website ↗
+</a>
+
+</div>
+
+<p class="note" style="margin-top:18px">
+Educational content only. No guaranteed income or profit.
+</p>
+
+</div>
+
+<div class="mods">
+
+<div class="mod">
+<i>01</i>
+<span>
+<b style="color:var(--text);font-weight:500">Introduction to Dropshipping</b><br>
+The business model, order process, terminology, advantages and limits.
+</span>
+</div>
+
+<div class="mod">
+<i>02</i>
+<span>
+<b style="color:var(--text);font-weight:500">Product Research</b><br>
+Evaluating demand, competition, customer problems and margins.
+</span>
+</div>
+
+<div class="mod">
+<i>03</i>
+<span>
+<b style="color:var(--text);font-weight:500">Store Basics</b><br>
+Essential pages, product descriptions, images, navigation and trust.
+</span>
+</div>
+
+<div class="mod">
+<i>04</i>
+<span>
+<b style="color:var(--text);font-weight:500">Marketing Fundamentals</b><br>
+Content, social media and basic advertising concepts.
+</span>
+</div>
+
+<div class="mod">
+<i>05</i>
+<span>
+<b style="color:var(--text);font-weight:500">Orders &amp; Customer Experience</b><br>
+Order processing, communication and customer support.
+</span>
+</div>
+
+<div class="mod">
+<i>06</i>
+<span>
+<b style="color:var(--text);font-weight:500">Profit &amp; Business Numbers</b><br>
+Revenue, costs, fees, gross profit and margins.
+</span>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="wrap contact-grid">
+
+<div class="reveal">
+
+<div class="eyebrow"><b>06</b> / Contact</div>
+
+<h2>Have a project <em>in mind?</em></h2>
+
+<p style="color:var(--muted)">
+Let's turn your idea into a website, or get you started with Drop Launch. Send a message or reach me on Instagram.
+</p>
+
+<!-- INSTAGRAM LINK -->
+
+<a class="insta"
+href="https://www.instagram.com/raziii.kv/"
+target="_blank"
+rel="noopener">
+
+<span>
+<small>Instagram</small>
+<b>@raziii.kv</b>
+</span>
+
+<span class="arrow">↗</span>
+
+</a>
+
+<!-- WHATSAPP LINK -->
+
+<a class="insta"
+href="https://wa.me/919846309147"
+target="_blank"
+rel="noopener">
+
+<span>
+<small>WhatsApp</small>
+<b>9846309147</b>
+</span>
+
+<span class="arrow">↗</span>
+
+</a>
+
+</div>
+
+<!-- CONTACT FORM -->
+
+<form id="contactForm" class="reveal">
+
+<div class="two">
+
+<div>
+<label for="name">Your name *</label>
+<input id="name" name="name" required>
+</div>
+
+<div>
+<label for="email">Email address *</label>
+<input id="email" name="email" type="email" required>
+</div>
+
+</div>
+
+<div class="two">
+
+<div>
+<label for="phone">Phone / WhatsApp (optional)</label>
+<input id="phone" name="phone" type="tel">
+</div>
+
+<div>
+<label for="interest">I'm interested in *</label>
+
+<select id="interest" name="interest" required>
+<option value="">Select one</option>
+<option>Business Website</option>
+<option>Online Store</option>
+<option>Landing Page</option>
+<option>Drop Launch Course</option>
+<option>Something else</option>
+</select>
+
+</div>
+</div>
+
+<div>
+<label for="message">A little about your project *</label>
+<textarea id="message" name="message" required></textarea>
+</div>
+
+<div>
+<button class="btn solid" type="submit">
+Let's Start a Conversation →
+</button>
+</div>
+
+<div id="status"></div>
+
+<p class="note">
+Your details are used only to respond to this enquiry.
+</p>
+
+</form>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="wrap foot">
+
+<div>
+
+<div class="big">
+Creative thinking.<br>
+<em>Champion mindset.</em>
+</div>
+
+<small>
+© <span id="year"></span> Razi KV. All rights reserved. Made with intention.
+</small>
+
+</div>
+
+<a href="#home" class="top">BACK TO TOP ↑</a>
+
+</div>
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// Mobile menu
+
+const links = document.getElementById('links');
+
+document.getElementById('menuBtn').onclick = () => {
+  links.classList.toggle('open');
+};
+
+links.querySelectorAll('a').forEach(a => {
+  a.onclick = () => links.classList.remove('open');
+});
+
+
+// Marquee animation
+
+const track = document.getElementById('track');
+
+track.innerHTML += track.innerHTML;
+
+
+// Scroll reveal animation
+
+const io = new IntersectionObserver(es => {
+
+  es.forEach(e => {
+
+    if(e.isIntersecting) {
+      e.target.classList.add('show');
+      io.unobserve(e.target);
+    }
+
+  });
+
+}, {threshold:.12});
+
+document.querySelectorAll('.reveal').forEach(x => {
+  io.observe(x);
+});
+
+
+// Current year
+
+document.getElementById('year').textContent =
+new Date().getFullYear();
+
+
+// Contact form
+
+// Add your Formspree endpoint here to receive enquiries by email.
+
+const FORM_ENDPOINT = '';
+
+const form = document.getElementById('contactForm');
+
+const status = document.getElementById('status');
+
+form.addEventListener('submit', async e => {
+
+  e.preventDefault();
+
+  if(!FORM_ENDPOINT) {
+
+    status.style.color = '#fbbf24';
+
+    status.textContent =
+    'Demo mode: add your Formspree link in the code to receive messages.';
+
+    return;
+  }
+
+  status.style.color = 'var(--muted)';
+
+  status.textContent = 'Sending...';
+
+  try {
+
+    const res = await fetch(FORM_ENDPOINT, {
+      method:'POST',
+      body:new FormData(form),
+      headers:{'Accept':'application/json'}
+    });
+
+    if(!res.ok) throw new Error();
+
+    status.style.color = '#34d399';
+
+    status.textContent =
+    'Thank you! Your message has been sent.';
+
+    form.reset();
+
+  } catch {
+
+    status.style.color = '#f87171';
+
+    status.textContent =
+    'Something went wrong. Please try again or message me on WhatsApp.';
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
